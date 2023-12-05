@@ -4,6 +4,7 @@ import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Path;
 import jakarta.persistence.criteria.Predicate;
 import org.crazyit.app.dao.StudentDao;
+import org.crazyit.app.domain.Clazz;
 import org.crazyit.app.domain.Student;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -67,6 +68,7 @@ public class StudentDaoTest {
         var s2 = new Student("杏", "木仙", 0, '\0');
         var s3 = new Student("孙", "花", 0, '男');
         var s4 = new Student("蜘蛛", "盘丝", 0, '女');
+        s4.setClazz(new Clazz("基础班"));
 
         return Stream.of(s1, s2, s3, s4);
     }
