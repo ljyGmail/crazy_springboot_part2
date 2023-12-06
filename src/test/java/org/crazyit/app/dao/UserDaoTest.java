@@ -13,7 +13,7 @@ public class UserDaoTest {
     private UserDao userDao;
 
     @ParameterizedTest
-    @ValueSource(ints = {17, 18})
+    @ValueSource(ints = {15, 16})
     public void testDelete(Integer id) {
         System.out.println("受影响的记录条数: " + userDao.delete(id));
     }
