@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    initialization-mode: always
+    continue-on-error: false
+  profiles:
+    active: postgre
+---
+spring:
+  config:
+    activate.on-profile: mysql
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/crazy_springboot?serverTimezone=UTC
+    username: root
+    password: 445566hh
+---
+spring:
+  config:
+    activate.on-profile: postgre
+  datasource:
+    platform: postgre
+    url: jdbc:postgresql://localhost:5432/crazy_springboot
+    username: postgres
+    password: 445566hh
